@@ -1,4 +1,4 @@
-#Projects with Separate GitHub links
+## Projects with Separate GitHub links
 
 Bluetooth Internal Positioning System Senior Design Project:
 
