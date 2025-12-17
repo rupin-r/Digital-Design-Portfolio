@@ -9,7 +9,7 @@ Additional projects I have worked on, but can't add to this repository for acade
 
 * Neural Architecture Search
 
-* 8 bit MIPS processor in Verilog programmed to Basys FPGA
+* 8 bit single-cycle processor in Verilog programmed to Basys FPGA
 
 * Traffic Light System implemented with hardware and SystemVerilog
 
@@ -18,3 +18,5 @@ Additional projects I have worked on, but can't add to this repository for acade
 * Atari Breakout using ARM assembly on the TIVA C Series
 
 * Open world game in Unreal was also too big to place in this repository
+
+* 2x2 and 4x4 TPU Coprocessor for CROC SoC using TSMC cells
