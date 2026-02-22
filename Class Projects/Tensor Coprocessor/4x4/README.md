@@ -7,7 +7,7 @@ These details can also be found in the files themselves
 --------------------
 
 This module implements a 4x4 floating point matrix multiplier given full input and output port lists
-It takes approximately 480 cycles to complete one 2x2 multiplication with held outputs
+It takes approximately 480 cycles to complete one 4x4 multiplication with held outputs
 
 Approximately 27 cycles go into a single multiplication
 25 cycles are for multiplication, one cycle for addition, and one for holding output
