@@ -167,6 +167,40 @@ done:  An output bit that dictates when output values are ready to use
 **external_rot_four.sv:**
 --------------------
 
+This module handles the external rotation of matrix multiplication with A matrix values
+
+This module must be in sync with internal rotation since the A matrix rotates at the same time the B matrix rotates
+
+The inputs for this module are as follows:
+
+A:     A single 32 bit floating point value from matrix A
+
+B:     A single 32 bit floating point value from matrix A
+
+C:     A single 32 bit floating point value from matrix A
+
+D:     A single 32 bit floating point value from matrix A
+
+The entirety of matrix B is included here
+
+A row output is given with output values
+
+out1:  A single 32 bit floating point value denoting a matrix multiplication output
+
+out2:  A single 32 bit floating point value denoting a matrix multiplication output
+
+out3:  A single 32 bit floating point value denoting a matrix multiplication output
+
+out4:  A single 32 bit floating point value denoting a matrix multiplication output
+
+clk:   The system clk positive edge trigger
+
+rst:   A combination of reset_mult from cyclic array and system rst, positive edge trigger
+
+start: Comes from the overall design for reset synchronization
+
+done:  Signifies when row of matrix multiplication is done for batch timing
+
 --------------------
 **internal_rot_four.sv:**
 --------------------
