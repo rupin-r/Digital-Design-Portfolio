@@ -10,6 +10,8 @@ A:     A single 32 bit floating point value from matrix A
 
 I:     A single 32 bit floating point value from matrix B
 J:     A single 32 bit floating point value from matrix B
+K:     A single 32 bit floating point value from matrix B
+L:     A single 32 bit floating point value from matrix B
 
 out:   A single 32 bit floating point value denoting a matrix multiplication output
 
