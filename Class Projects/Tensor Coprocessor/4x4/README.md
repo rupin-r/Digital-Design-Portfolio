@@ -36,19 +36,19 @@ Then an output row can be computed with 4 MAC units and 4 rotations
 
 First batch:
 
-    Pass in A11, A12, A13, A14 as well as the entirety of B
+  Pass in A11, A12, A13, A14 as well as the entirety of B
     
-    MAC unit 1:
-        Contains B11, B41, B31, and B21
+  MAC unit 1:
+  Contains B11, B41, B31, and B21
     
-    MAC unit 2:
-        Contains B22, B12, B42, and B32
+  MAC unit 2:
+  Contains B22, B12, B42, and B32
     
-    MAC unit3:
-        Contains B33, B23, B13, and B43
+  MAC unit3:
+  Contains B33, B23, B13, and B43
     
-    MAC unit4:
-        Contains B44, B34, B24, and B14
+  MAC unit4:
+  Contains B44, B34, B24, and B14
 
 Second batch:
     Pass in A21, A22, A23, and A24
