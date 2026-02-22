@@ -1,11 +1,21 @@
+*File Descriptions*
+These details can also be found in the files themselves
 --------------------
-**CSE321_Project3_rupinraj_TestingLCD.cpp:**
---------------------
-
---------------------
-**CSE321_Project3_rupinraj_TestingMatrixKeypad.cpp:**
+**cyclic_array_four.sv:**
 --------------------
 
 --------------------
-**CSE321_Project3_rupinraj_TestingIR.cpp:**
+**external_rot_four.sv:**
+--------------------
+
+--------------------
+**internal_rot_four.sv:**
+--------------------
+
+--------------------
+**mult.sv:**
+--------------------
+
+--------------------
+**acc.sv:**
 --------------------
