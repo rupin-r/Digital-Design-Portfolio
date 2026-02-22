@@ -16,27 +16,44 @@ Then there are additional cycles used for resetting multipliers and sums
 The matrix multiplication follows a cyclic array pattern to compute NxN matrix 
 multiplication using N MAC units
 
-The pattern is as follows:
-Given arrays A = [ A11  A12  A13  A14 ] and B = [ B11  B12  B13  B14 ]
-                 [ A21  A22  A23  A24 ]         [ B21  B22  B23  B24 ]
-                 [ A31  A32  A33  A34 ]         [ B31  B32  B33  B34 ]
-                 [ A41  A42  A43  A44 ]         [ B41  B42  B43  B44 ]
+The pattern is as follows
+
+Given arrays A:  
+                 [ A11  A12  A13  A14 ]
+                 [ A21  A22  A23  A24 ]
+                 [ A31  A32  A33  A34 ]
+                 [ A41  A42  A43  A44 ]
+                 
+And B:  
+                 [ A11  A12  A13  A14 ]
+                 [ A21  A22  A23  A24 ]
+                 [ A31  A32  A33  A34 ]
+                 [ A41  A42  A43  A44 ]
 
 Then an output row can be computed with 4 MAC units and 4 rotations
+
 First batch:
+
     Pass in A11, A12, A13, A14 as well as the entirety of B
+    
     MAC unit 1:
         Contains B11, B41, B31, and B21
+    
     MAC unit 2:
         Contains B22, B12, B42, and B32
+    
     MAC unit3:
         Contains B33, B23, B13, and B43
+    
     MAC unit4:
         Contains B44, B34, B24, and B14
+
 Second batch:
     Pass in A21, A22, A23, and A24
+
 Third batch:
     Pass in A31, A32, A33, and A34
+
 Fourth batch:
     Pass in A41, A42, A43, and A44
     
