@@ -157,6 +157,7 @@ done:  An output bit that dictates when output values are ready to use
        
        Because of this, you can not start another matrix multiplication without resetting
        
+       
 --------------------
 **external_rot_four.sv:**
 --------------------
