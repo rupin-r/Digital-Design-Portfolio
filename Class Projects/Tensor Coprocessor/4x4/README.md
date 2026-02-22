@@ -50,14 +50,18 @@ First batch:
   MAC unit4:
   Contains B44, B34, B24, and B14
 
+
 Second batch:
     Pass in A21, A22, A23, and A24
+
 
 Third batch:
     Pass in A31, A32, A33, and A34
 
+
 Fourth batch:
     Pass in A41, A42, A43, and A44
+
     
 Structure:
 
