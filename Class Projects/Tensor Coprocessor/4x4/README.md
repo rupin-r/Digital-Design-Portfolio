@@ -235,6 +235,79 @@ done:  Signifies when a single multiplication is done for rotation timing
 **mult.sv:**
 --------------------
 
+This module implements an IEEE 754 floating point multiplication of two values
+
+It takes approximately 27 cycles to complete with 25 for multiplying mantissas
+
+1 for accumulation (addition) and 1 for holding the output
+
+This module ignores almost every special scenario such as NaN and infinity with the only exception being 0. TAKE CAUTION USING THIS MODULE AS IT IS NOT A COMPLETE FLOATING POINT MULTIPLIER BECAUSE IT IGNORES THESE SPECIAL VALUES. It also doesn't handle overflow because it doesn't handle infinity or NaN.
+
+IEEE 754 Floating Point Multiplication:
+
+Given a 32 bit value, break it down into 3 parts
+
+1 bit sign bit
+
+8 bit exponent
+
+23 bit mantissa
+
+The mantissa should be prepended with 1 for a 24 bit value as per IEEE 754 standards
+
+The exponent bits are 127 biased and should be factored into the sum
+
+To calculate the product, the 24 bit mantissas should be multiplied together
+
+Then the exponent bits should be summed
+
+And the sign bit should be xor'ed.
+
+Because it is guaranteed that the 24 bit mantissas start with 1, the output is guaranteed to start with 1 as well. Then in IEEE 754 format, only the top 24 bits matter in the multiplication. Because of this, the bottom 24 bits of the multiplication can be ignored leading to less storage space required.
+
+Multiplication is given as follows:
+
+    output = (output >> 1) + A if B[0]
+    output = (output >> 1) + A if B[1]
+    output = (output >> 1) + A if B[2]
+                     .
+                     .
+                     .
+    output = (output >> 1) + A if B[21]
+    output = (output >> 1) + A if B[22]
+    output = (output >> 1) + A if B[23]
+
+where output is 25 bits (24 bits + 1 overflow bit) and both A and B are 24 bits
+
+The shifting of 1 is due to zero padding when multiplying values with more than one digit
+
+This bit at the end will not generate a carry bit because of the padding which means it will not contribute to the top 24 bit product and can be shifted out
+
+Since it is 24 bit multiplication, there's a possibility of an overflow bit
+
+The overflow bit must be accounted for and goes into normalization
+
+If there is overflow, add 1 to the exponent sum
+
+output_exp = A_exp + B_exp - 127 (for bias) + overflow bit
+
+The inputs for this module are as follows:
+
+    A:    A 32 bit IEEE 754 floating point value
+    B:    A 32 bit IEEE 754 floating point value
+    out:  A * B as a 32 bit IEEE 754 floating point value
+    out2: accumulator output as a 32 bit IEEE 754 floating point value
+          It should be noted that out2 = out2 + A*B where initial value of out2 is 0
+          It must be reset to go back to 0 or it will keep incrementing
+
+    clk:   The system clk positive edge trigger
+    rst:   A combination of reset_mult from cyclic array and system rst, positive edge trigger
+    start: Signal received from internal rotation to begin a multiplication
+           Multiplication only begins when start goes low after going high
+           Start may be held high indefinitely, but no multiplication will occur
+    done:  An output bit signaling that both multiplication and accumulation are done
+           To just signal that multiplication is done, assign done = count[3] && count[4]
+
 --------------------
 **acc.sv:**
 --------------------
