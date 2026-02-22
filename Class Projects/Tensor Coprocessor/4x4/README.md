@@ -126,10 +126,13 @@ Array 2: [ B11  B12  B13  B14 ]
          [ B41  B42  B43  B44 ]
 
 
-Output:  [ out11=A11*B11 + A12*B21 + A13*B31 + A14*B41  out12=A11*B12 + A12*B22 + A13*B32 + A14*B42  out13=A11*B13 + A12*B23 + A13*B33 + A14*B43  out14=A11*B14 + A12*B24 + A13*B34 + A14*B44 ]
-         [ out21=A21*B11 + A22*B21 + A23*B31 + A24*B41  out22=A21*B12 + A22*B22 + A23*B32 + A24*B42  out23=A21*B13 + A22*B23 + A23*B33 + A24*B43  out24=A21*B14 + A22*B24 + A23*B34 + A24*B44 ]
-         [ out31=A31*B11 + A32*B21 + A33*B31 + A34*B41  out32=A31*B12 + A32*B22 + A33*B32 + A34*B42  out33=A31*B13 + A32*B23 + A33*B33 + A34*B43  out34=A31*B14 + A32*B24 + A33*B34 + A34*B44 ]
-         [ out41=A41*B11 + A42*B21 + A43*B31 + A44*B41  out42=A41*B12 + A42*B22 + A43*B32 + A44*B42  out43=A41*B13 + A42*B23 + A43*B33 + A44*B43  out44=A41*B14 + A42*B24 + A43*B34 + A44*B44 ]
+Output:  [ out11=A11B11 + A12B21 + A13B31 + A14B41  out12=A11B12 + A12B22 + A13B32 + A14B42  out13=A11B13 + A12B23 + A13B33 + A14B43  out14=A11B14 + A12B24 + A13B34 + A14B44 ]
+
+         [ out21=A21B11 + A22B21 + A23B31 + A24B41  out22=A21B12 + A22B22 + A23B32 + A24B42  out23=A21B13 + A22B23 + A23B33 + A24B43  out24=A21B14 + A22B24 + A23B34 + A24B44 ]
+         
+         [ out31=A31B11 + A32B21 + A33B31 + A34B41  out32=A31B12 + A32B22 + A33B32 + A34B42  out33=A31B13 + A32B23 + A33B33 + A34B43  out34=A31B14 + A32B24 + A33B34 + A34B44 ]
+         
+         [ out41=A41B11 + A42B21 + A43B31 + A44B41  out42=A41B12 + A42B22 + A43B32 + A44B42  out43=A41B13 + A42B23 + A43B33 + A44B43  out44=A41B14 + A42B24 + A43B34 + A44B44 ]
 
 
 Additional note, out11, out12, out13, and out14 will be completed first and may be used preemptively as these values will be held.
@@ -139,13 +142,21 @@ After an additional 120 cycles, the next batch will be complete: out21, out22, o
 out31, out32, out33, and out34 will be 120 cycles after the second batch and the last batch will be complete at the full 480 cycles.
 
 clk:   The system clk positive edge trigger. Should be relatively fast.
+
 start: Should be held high for a maximum of two clock cycles, then set low
+
        I think I fixed it so that it doesn't really matter, but it should still 
+       
        be less than 100 clock cycles or it will start causing errors
+       
 rst:   Positive edge triggered. Resets literally everything to 0
+
 done:  An output bit that dictates when output values are ready to use
+
        This maintains the output values as well
+       
        Because of this, you can not start another matrix multiplication without resetting
+       
 --------------------
 **external_rot_four.sv:**
 --------------------
