@@ -19,16 +19,18 @@ multiplication using N MAC units
 The pattern is as follows
 
 Given arrays A:  
-                 [ A11  A12  A13  A14 ]
-                 [ A21  A22  A23  A24 ]
-                 [ A31  A32  A33  A34 ]
-                 [ A41  A42  A43  A44 ]
+
+  [ A11  A12  A13  A14 ]
+  [ A21  A22  A23  A24 ]
+  [ A31  A32  A33  A34 ]
+  [ A41  A42  A43  A44 ]
                  
 And B:  
-                 [ A11  A12  A13  A14 ]
-                 [ A21  A22  A23  A24 ]
-                 [ A31  A32  A33  A34 ]
-                 [ A41  A42  A43  A44 ]
+
+  [ B11  B12  B13  B14 ]
+  [ B21  B22  B23  B24 ]
+  [ B31  B32  B33  B34 ]
+  [ B41  B42  B43  B44 ]
 
 Then an output row can be computed with 4 MAC units and 4 rotations
 
