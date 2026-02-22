@@ -311,3 +311,55 @@ The inputs for this module are as follows:
 --------------------
 **acc.sv:**
 --------------------
+
+This module implements an IEEE 754 floating point addition of two values
+
+It's entirely combinational with registers just to store the output
+
+This module ignores almost every special scenario such as NaN and infinity with the only exception being 0. TAKE CAUTION USING THIS MODULE AS IT IS NOT A COMPLETE FLOATING POINT ACCUMULATOR BECAUSE IT IGNORES THESE SPECIAL VALUES. It also doesn't handle overflow because it doesn't handle infinity or NaN.
+
+IEEE 754 Floating Point Multiplication:
+
+Given a 32 bit value, break it down into 3 parts
+
+1 bit sign bit
+
+8 bit exponent
+
+23 bit mantissa
+
+The mantissa should be prepended with 1 for a 24 bit value as per IEEE 754 standards
+
+The exponent bits are 127 biased and should be factored in
+
+To calculate the sum, there are 7 main steps:
+
+Given 32 bit floating point values A and B,
+
+First, you need to figure out which exponent is bigger for A and B
+
+Once you determine which has a higher exponent, shift the lower one's 24 bit mantissa value right by the difference in exponent values
+
+Now you have two mantissa values, one normal and one shifted right
+
+Then you need to figure out whether to do addition or subtraction based on the sign bits
+
+Either do addition or subtraction of the smaller one to the bigger one
+
+Since there was shifting and either addition or subtraction, the output might have leading zeroes and isn't guaranteed to start with 1 like floating point multiplication does
+
+So count the number of leading zeroes
+
+Shift the result by the number of leading zeroes so it does start with 1
+
+This becomes the mantissa value
+
+The exponent value is calculated by taking the bigger exponent and subtracting the number of leading zeroes.
+
+The sign bit is taken from the one with a higher exponent. If the exponents are equal, the sign bit is taken from the result of the mantissa operation
+
+The inputs for this module are as follows:
+    A:   The value to accumulate the output by
+    out: The accumulated value of incrementing A every clk
+    clk: Not system clk, controlled by done signals of the multiplier, positive edge trigger
+    rst: A combination of reset_mult from cyclic array and system rst, positive edge trigger
