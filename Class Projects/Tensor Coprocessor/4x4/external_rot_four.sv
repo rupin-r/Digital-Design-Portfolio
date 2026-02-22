@@ -8,16 +8,16 @@ This module must be in sync with internal rotation since the A matrix rotates at
 The inputs for this module are as follows:
 A:     A single 32 bit floating point value from matrix A
 B:     A single 32 bit floating point value from matrix A
+C:     A single 32 bit floating point value from matrix A
+D:     A single 32 bit floating point value from matrix A
 
 The entirety of matrix B is included here
-I:     A single 32 bit floating point value from matrix B
-J:     A single 32 bit floating point value from matrix B
-K:     A single 32 bit floating point value from matrix B
-L:     A single 32 bit floating point value from matrix B
 
 A row output is given with output values
 out1:  A single 32 bit floating point value denoting a matrix multiplication output
 out2:  A single 32 bit floating point value denoting a matrix multiplication output
+out3:  A single 32 bit floating point value denoting a matrix multiplication output
+out4:  A single 32 bit floating point value denoting a matrix multiplication output
 
 clk:   The system clk positive edge trigger
 rst:   A combination of reset_mult from cyclic array and system rst, positive edge trigger
