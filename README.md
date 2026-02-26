@@ -16,7 +16,3 @@ Additional projects I have completed, but can't add to this repository are:
 * Hamming Code using MIPS assembly
 
 * Atari Breakout using ARM assembly on the TIVA C Series
-
-* Open world game in Unreal was also too big to place in this repository
-
-* 2x2 and 4x4 TPU Coprocessor for CROC SoC using TSMC cells
