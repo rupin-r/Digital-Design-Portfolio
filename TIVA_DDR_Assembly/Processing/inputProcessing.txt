@@ -1,0 +1,83 @@
+import processing.serial.*;
+import ddf.minim.*;
+ 
+Serial myPort;
+Minim minim;
+AudioPlayer player1;
+AudioPlayer player2;
+AudioPlayer player3;
+AudioPlayer player4;
+byte arbitraryCode1 = 96;
+byte arbitraryCode2 = 97;
+byte arbitraryCode3 = 98;
+byte arbitraryCode4 = 99;
+byte stopCode = 92;
+ 
+void setup()
+{
+  // In the next line, you'll need to change this based on your USB port name
+  myPort = new Serial(this, "COM4", 9600);
+  minim = new Minim(this);
+ 
+  // Put in the name of your sound file below, and make sure it is in the same directory
+  player1 = minim.loadFile("C:/Users/2Cool/SavePlace/Songs/ResurrectionSpell.mp3");
+  player2 = minim.loadFile("C:/Users/2Cool/SavePlace/Songs/Arianrhod.mp3");
+  player3 = minim.loadFile("C:/Users/2Cool/SavePlace/Songs/MusicalMovement.mp3");
+  player4 = minim.loadFile("C:/Users/2Cool/SavePlace/Songs/Aleph.mp3");
+}
+ 
+void draw() {
+  while (myPort.available() > 0) {
+    int inByte = myPort.read();
+    if (inByte == arbitraryCode1 && !player1.isPlaying()) {
+      if(player2.isPlaying())
+        player2.pause();
+      if(player3.isPlaying())
+        player3.pause();
+      if(player4.isPlaying())
+        player4.pause();
+      player1.rewind();
+      player1.play();
+    }
+    else if (inByte == arbitraryCode2 && !player2.isPlaying()) {
+      if(player1.isPlaying())
+        player1.pause();
+      if(player3.isPlaying())
+        player3.pause();
+      if(player4.isPlaying())
+        player4.pause();
+      player2.rewind();
+      player2.play();
+    }
+    else if (inByte == arbitraryCode3 && !player3.isPlaying()) {
+      if(player2.isPlaying())
+        player2.pause();
+      if(player1.isPlaying())
+        player1.pause();
+      if(player4.isPlaying())
+        player4.pause();
+      player3.rewind();
+      player3.play();
+    }
+    else if (inByte == arbitraryCode4 && !player4.isPlaying()) {
+      if(player2.isPlaying())
+        player2.pause();
+      if(player3.isPlaying())
+        player3.pause();
+      if(player1.isPlaying())
+        player1.pause();
+      player4.rewind();
+      player4.play();
+    }
+    else if (inByte == stopCode) {
+      if(player1.isPlaying())
+        player1.pause();
+      if(player2.isPlaying())
+        player2.pause();
+      if(player3.isPlaying())
+        player3.pause();
+      if(player4.isPlaying())
+        player4.pause();
+    }
+  }
+}
