@@ -1,0 +1,68 @@
+#include "driver/uart.h"
+#define TXPin 17
+
+char arrayMatrix[256] = { 81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81, 
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                          81, 81, 81, 81, 81, 81, 81, 81, 81, 81,
+                        };
+
+void setup() {
+  // Configure UART parameters
+  uart_config_t uart_config = {
+    .baud_rate = 115200,          // Lower baud rate for better visualization
+    .data_bits = UART_DATA_8_BITS,
+    .parity = UART_PARITY_DISABLE,
+    .stop_bits = UART_STOP_BITS_1,
+    .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
+  };
+  
+  // Set UART parameters
+  uart_param_config(UART_NUM_1, &uart_config);
+
+  // Install UART driver
+  uart_driver_install(UART_NUM_1, 256, 0, 0, NULL, 0);
+
+  // Set UART pins for transmit (TX) mode
+  uart_set_pin(UART_NUM_1, TXPin, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
+}
+
+void loop() {
+  for (int i = 0; i < 512; i++) {
+    // Check for even numbers
+    if (i % 2 == 0) {
+      const char x = 126;
+      const char* square_wave = &x;
+      // Transmit even numbers
+      uart_write_bytes(UART_NUM_1, square_wave, strlen(square_wave));
+    } else {
+      // Check for odd numbers
+      const char y = arrayMatrix[i/2];
+      const char* square_wave = &y;
+      // Transmit odd numbers
+      uart_write_bytes(UART_NUM_1, square_wave, strlen(square_wave));
+    }
+  }
+  // Delay for visualization on the oscilloscope
+  delay(100);
+}
