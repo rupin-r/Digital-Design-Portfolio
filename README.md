@@ -1,5 +1,44 @@
 # College Projects
+
 A compilation of college projects I have worked on individually or as part of a team and am allowed to release without the possibility of academic disintegrity at University at Buffalo or Worcester Polytechnic Institute.
+
+## Project Descriptions
+
+**32-bit Processor SV**
+
+
+**Class Projects**
+
+
+**Haptic Reality**
+
+
+**Limited Autonomous Vehicle**
+
+
+**Other**
+
+
+**Tiva DDR Assembly**
+
+
+**Teaching Assistant Work**
+
+
+**Tensor Coprocessor**
+
+
+## Projects with Separate GitHub links
+
+Bluetooth Internal Positioning System Senior Design Project:
+
+https://github.com/CPompey1/Wayfinder
+
+Motion Tracking with Cheap IMUs Using Embedded Deep Learning Proof-of-Concept:
+
+https://github.com/rupin-r/MPU6050_MotionTracking_ProofofConcept
+
+## Additional Work
 
 Additional projects I have completed, but can't add to this repository are:
 
@@ -16,13 +55,3 @@ Additional projects I have completed, but can't add to this repository are:
 * Hamming Code using MIPS assembly
 
 * Atari Breakout using ARM assembly on the TIVA C Series
-
-## Projects with Separate GitHub links
-
-Bluetooth Internal Positioning System Senior Design Project:
-
-https://github.com/CPompey1/Wayfinder
-
-Motion Tracking with Cheap IMUs Using Embedded Deep Learning Proof-of-Concept:
-
-https://github.com/rupin-r/MPU6050_MotionTracking_ProofofConcept
