@@ -5,13 +5,14 @@ A compilation of college projects I have worked on individually or as part of a 
 ## Project Descriptions
 
 **32-bit Processor SV**
+
 A combination of 3 different folders, this project contains: 
 
-a 32-bit implementation of a MIPS processor,
+  a 32-bit implementation of a MIPS processor,
 
-a 32-bit implementation of a MIPS processor without write-back or memory, 
+  a 32-bit implementation of a MIPS processor without write-back or memory, 
 
-and a 32-bit skeleton of the MIPS processor without write-back or memory for class project use. 
+  and a 32-bit skeleton of the MIPS processor without write-back or memory for class project use. 
 
 Additionally, these MIPS processors do not contain the full instruction set, but have the necessary pieces to add instructions.
 
