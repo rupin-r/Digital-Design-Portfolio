@@ -4,31 +4,13 @@ A compilation of college projects I have worked on individually or as part of a 
 
 ## Project Descriptions
 
-**32-bit Processor SV**
+**Tensor Coprocessor**
 
-A combination of 3 different folders, this project contains: 
+This folder contains a 32-bit IEEE 754 floating point implementation of a TPU with 2x2 and 4x4 for integration with CROC SoC.
 
-a 32-bit implementation of a MIPS processor in System Verilog,
+While not included, these files were used with the CROC SoC cells into the Cadence design flow for synthesis and layout onto a 2mm padframe with 180nm TSMS cells for tapeout.
 
-a 32-bit implementation of a MIPS processor without write-back or memory in System Verilog, 
-
-and a 32-bit skeleton of the MIPS processor without write-back or memory for class project use, also in System Verilog. 
-
-Additionally, these MIPS processors do not contain the full instruction set, but have the necessary pieces to add instructions.
-
-These processors were coded and tested in edaplayground using Icarus Verilog 12.0
-
-**Class Projects**
-
-This folder contains class projects that did not involve coding
-
-Cello Laser Metrology
-
-A class project involving the use of laser holography and scanning laser doppler vibrometry to find resonance modes of a cello for optimal dampener placement. Reports, discussion, and results are listed in this github folder.
-
-Polarization Independent Metasurface Lens
-
-A class project to recreate the results of a paper incorporating nanophotonics using Ansys Lumerical. This specific project creates a lens with nanoscale etchings to focus light at a point irregardless of incoming polarization. Results and presentation are listed in this github folder.
+The 2x2 and 4x4 folders have the System Verilog implementation of the TPU and the README presents more information on results of synthesis and layout.
 
 **Haptic Reality**
 
@@ -44,23 +26,19 @@ the python code for determining phase offset for point or multi-point convergenc
 
 and the Unity code for visualization and hand tracking.
 
-**Limited Autonomous Vehicle**
+**32-bit Processor SV**
 
-This folder contains code for a Nucleo L4R5ZI (stm32) board with instructions in assembling and running a small autonomous vehicle with short range infrared object detection. It has a limited range and a grid coordinate system for movement and autonomy. 
+A combination of 3 different folders, this project contains: 
 
-Key parts of this project include:
+a 32-bit implementation of a MIPS processor in System Verilog,
 
-An I2C LCD,
+a 32-bit implementation of a MIPS processor without write-back or memory in System Verilog, 
 
-a serial dot display,
+and a 32-bit skeleton of the MIPS processor without write-back or memory for class project use, also in System Verilog. 
 
-two PWM motors,
+Additionally, these MIPS processors do not contain the full instruction set, but have the necessary pieces to add instructions.
 
-and a really bad IR sensor.
-
-**Other**
-
-The "Other" folder refers to all work completed outside of academics, but still within college. For now, this only includes a Unity game jam done during my time at University at Buffalo.
+These processors were coded and tested in edaplayground using Icarus Verilog 12.0
 
 **Tiva DDR Assembly**
 
@@ -76,11 +54,39 @@ Arduino and Processing code for music compatibility with the TIVA processor,
 
 and replacement input keys of WASD instead of button peripherals.
 
+**Limited Autonomous Vehicle**
+
+This folder contains code for a Nucleo L4R5ZI (stm32) board with instructions in assembling and running a small autonomous vehicle with short range infrared object detection. It has a limited range and a grid coordinate system for movement and autonomy. 
+
+Key parts of this project include:
+
+An I2C LCD,
+
+a serial dot display,
+
+two PWM motors,
+
+and a really bad IR sensor.
+
+**Class Projects**
+
+This folder contains class projects that did not involve coding.
+
+Cello Laser Metrology
+
+A class project involving the use of laser holography and scanning laser doppler vibrometry to find resonance modes of a cello for optimal dampener placement. Reports, discussion, and results are listed in this github folder.
+
+Polarization Independent Metasurface Lens
+
+A class project to recreate the results of a paper incorporating nanophotonics using Ansys Lumerical. This specific project creates a lens with nanoscale etchings to focus light at a point irregardless of incoming polarization. Results and presentation are listed in this github folder.
+
 **Teaching Assistant Work**
 
+This folder contains work I personally created in order to assist in teaching students concepts for the given class.
 
-**Tensor Coprocessor**
+**Other**
 
+The "Other" folder refers to all work completed outside of academics, but still within college. For now, this only includes a Unity game jam done during my time at University at Buffalo.
 
 ## Projects with Separate GitHub links
 
