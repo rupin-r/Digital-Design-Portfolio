@@ -32,6 +32,7 @@ A class project to recreate the results of a paper incorporating nanophotonics u
 
 **Haptic Reality**
 
+This folder contains research done during undergrad in creating a haptic reality system on an Altera FPGA with a PCB of 256 ultrasonic emitters. 
 
 **Limited Autonomous Vehicle**
 
