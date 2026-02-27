@@ -8,16 +8,27 @@ A compilation of college projects I have worked on individually or as part of a 
 
 A combination of 3 different folders, this project contains: 
 
-  a 32-bit implementation of a MIPS processor,
+a 32-bit implementation of a MIPS processor in System Verilog,
 
-  a 32-bit implementation of a MIPS processor without write-back or memory, 
+a 32-bit implementation of a MIPS processor without write-back or memory in System Verilog, 
 
-  and a 32-bit skeleton of the MIPS processor without write-back or memory for class project use. 
+and a 32-bit skeleton of the MIPS processor without write-back or memory for class project use, also in System Verilog. 
 
 Additionally, these MIPS processors do not contain the full instruction set, but have the necessary pieces to add instructions.
 
+These processors were coded and tested in edaplayground using Icarus Verilog 12.0
+
 **Class Projects**
 
+This folder contains class projects that did not involve coding
+
+Cello Laser Metrology
+
+A class project involving the use of laser holography and scanning laser doppler vibrometry to find resonance modes of a cello for optimal dampener placement. Reports, discussion, and results are listed in this github folder.
+
+Polarization Independent Metasurface Lens
+
+A class project to recreate the results of a paper incorporating nanophotonics using Ansys Lumerical. This specific project creates a lens with nanoscale etchings to focus light at a point irregardless of incoming polarization. Results and presentation are listed in this github folder.
 
 **Haptic Reality**
 
