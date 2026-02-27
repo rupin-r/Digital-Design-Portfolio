@@ -34,14 +34,47 @@ A class project to recreate the results of a paper incorporating nanophotonics u
 
 This folder contains research done during undergrad in creating a haptic reality system on an Altera FPGA with a PCB of 256 ultrasonic emitters. 
 
+It is separated into four parts:
+
+the Verilog code for the FPGA including phase alignment and UART receiving,
+
+the ESP32 code for receiving WiFi transmissions from the Quest 2 and sending through UART to the FPGA,
+
+the python code for determining phase offset for point or multi-point convergence,
+
+and the Unity code for visualization and hand tracking.
+
 **Limited Autonomous Vehicle**
 
+This folder contains code for a Nucleo L4R5ZI (stm32) board with instructions in assembling and running a small autonomous vehicle with short range infrared object detection. It has a limited range and a grid coordinate system for movement and autonomy. 
+
+Key parts of this project include:
+
+An I2C LCD,
+
+a serial dot display,
+
+two PWM motors,
+
+and a really bad IR sensor.
 
 **Other**
 
+The "Other" folder refers to all work completed outside of academics, but still within college. For now, this only includes a Unity game jam done during my time at University at Buffalo.
 
 **Tiva DDR Assembly**
 
+This folder contains the assembly implementation of Dance Dance Revolution with 32x32 bit character displays in terminal and high speed refresh rate.
+
+Due to the large output stream for display, this code features many optimizations for extremely fast processing in order to reduce lag to the minimum possible.
+
+Other features of this project include:
+
+Assembly setup of an onboard ADC for input processing of "pad" steps,
+
+Arduino and Processing code for music compatibility with the TIVA processor,
+
+and replacement input keys of WASD instead of button peripherals.
 
 **Teaching Assistant Work**
 
