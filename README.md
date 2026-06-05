@@ -68,25 +68,9 @@ two PWM motors,
 
 and a really bad IR sensor.
 
-**Class Projects**
-
-This folder contains class projects that did not involve coding.
-
-Cello Laser Metrology
-
-A class project involving the use of laser holography and scanning laser doppler vibrometry to find resonance modes of a cello for optimal dampener placement. Reports, discussion, and results are listed in this github folder.
-
-Polarization Independent Metasurface Lens
-
-A class project to recreate the results of a paper incorporating nanophotonics using Ansys Lumerical. This specific project creates a lens with nanoscale etchings to focus light at a point irregardless of incoming polarization. Results and presentation are listed in this github folder.
-
 **Teaching Assistant Work**
 
 This folder contains work I personally created in order to assist in teaching students concepts for the given class.
-
-**Other**
-
-The "Other" folder refers to all work completed outside of academics, but still within college. For now, this only includes a Unity game jam done during my time at University at Buffalo.
 
 ## Projects with Separate GitHub links
 
