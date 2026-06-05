@@ -18,4 +18,4 @@ An assembly implementation of an old rhythm game with Arduino communication for 
 14. Play the game!
 
 ## Copyright
-This project may be used for any purpose besides UB CSE 379. This code is easily identifiable as my own as the logic implemented, label names, and pixel resolution are generally unique. If you are caught using this repository for UB CSE 379, it will result in a 0. This code has no relevance to the class anyway as it is at a much higher level than what is expected. Additionally, for those attempting to distribute or sell this code, I highly advise against it as there are still several glitches that have not been fully fixed yet. Also, it would be highly beneficialy to change the animation style as there is significant lag printing in a console for animation.
+This project may be used for any purpose besides UB CSE 379.
