@@ -8,7 +8,7 @@ A compilation of projects I have worked on individually or as part of a team and
 
 This folder contains a 32-bit IEEE 754 floating point implementation of a TPU with 2x2 and 4x4 for integration with CROC SoC.
 
-While not included, these files were used with the CROC SoC cells into the Cadence design flow for synthesis and layout onto a 2mm padframe with 180nm TSMS cells for tapeout.
+While not included, these files were used with the CROC SoC cells into the Cadence design flow for synthesis and layout onto a 2mm padframe with 180nm TSMC cells for tapeout.
 
 The 2x2 and 4x4 folders have the System Verilog implementation of the TPU and the README presents more information on results of synthesis and layout.
 
