@@ -3,7 +3,7 @@
 These details can also be found in the files themselves
 
 --------------------
-**cyclic_array_four.sv:**
+**cyclic_array_two.sv:**
 --------------------
 
 This module implements a 2x2 floating point matrix multiplier given full input and output port lists
