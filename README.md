@@ -1,12 +1,12 @@
-# Digital Design Porfolio
+# Digital Design Portfolio
 
-A compilation of projects I have worked on individually or as part of a team and am allowed to release without the possibility of academic disintegrity at University at Buffalo or Worcester Polytechnic Institute.
+A compilation of projects I have worked on individually or as part of a team and am allowed to release without the possibility of academic dishonesty at University at Buffalo or Worcester Polytechnic Institute.
 
 ## Project Descriptions
 
-**Tensor Coprocessor**
+**Tensor Coprocessor (ASIC Tapeout)**
 
-This folder contains a 32-bit IEEE 754 floating point implementation of a TPU with 2x2 and 4x4 for integration with CROC SoC.
+This folder contains a 32-bit IEEE 754 floating point implementation of a TPU with 2x2 and 4x4 matrix multiplication configuration using SystemVerilog for integration with CROC SoC.
 
 While not included, these files were used with the CROC SoC cells into the Cadence design flow for synthesis and layout onto a 2mm padframe with 180nm TSMC cells for tapeout.
 
@@ -66,7 +66,7 @@ a serial dot display,
 
 two PWM motors,
 
-and a really bad IR sensor.
+and an infrared distance sensor.
 
 **Teaching Assistant Work**
 
