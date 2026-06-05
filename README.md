@@ -14,11 +14,11 @@ The 2x2 and 4x4 folders have the System Verilog implementation of the TPU and th
 
 **Haptic Reality**
 
-This folder contains research done during undergrad in creating a haptic reality system on an Altera FPGA with a PCB of 256 ultrasonic emitters. 
+This folder contains research in creating a haptic reality system on an Altera FPGA with a PCB of 256 ultrasonic emitters. 
 
 It is separated into four parts:
 
-the Verilog code for the FPGA including phase alignment and UART receiving,
+the Verilog code for FPGA design driving 256 ultrasonic emitters with phase synchronization and UART-controlled spatial focusing,
 
 the ESP32 code for receiving WiFi transmissions from the Quest 2 and sending through UART to the FPGA,
 
@@ -52,11 +52,11 @@ Assembly setup of an onboard ADC for input processing of "pad" steps,
 
 Arduino and Processing code for music compatibility with the TIVA processor,
 
-and replacement input keys of WASD instead of button peripherals.
+and dual input compatibility using input keys WASD with "pad" inputs.
 
 **Limited Autonomous Vehicle**
 
-This folder contains code for a Nucleo L4R5ZI (stm32) board with instructions in assembling and running a small autonomous vehicle with short range infrared object detection. It has a limited range and a grid coordinate system for movement and autonomy. 
+This folder contains code for a Nucleo L4R5ZI (stm32) board with instructions in assembling and running a small autonomous vehicle with short range infrared object detection. It has a limited range and a grid coordinate system for movement and autonomy. Given a starting point and ending point, the vehicle will traverse through unknown terrain to the ending point by avoiding obstacles and adjusting the path as necessary.
 
 Key parts of this project include:
 
