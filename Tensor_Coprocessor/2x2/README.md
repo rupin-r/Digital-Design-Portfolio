@@ -90,11 +90,7 @@ Output:
     [ out3 = CI + DK  out3 = CJ + DL ]
 
 
-Additional note, out1, out2, out13, and out14 will be completed first and may be used preemptively as these values will be held.
-
-After an additional 120 cycles, the next batch will be complete: out21, out22, out23, and out24
-
-out31, out32, out33, and out34 will be 120 cycles after the second batch and the last batch will be complete at the full 480 cycles.
+Additional note, out1 and out2 will be completed first and may be used preemptively as these values will be held.
 
 clk:   The system clk positive edge trigger. Should be relatively fast.
 
@@ -109,7 +105,7 @@ done:  An output bit that dictates when output values are ready to use
        Because of this, you can not start another matrix multiplication without resetting
        
 --------------------
-**external_rot_four.sv:**
+**external_rot_two.sv:**
 --------------------
 
 This module handles the external rotation of matrix multiplication with A matrix values
@@ -134,7 +130,7 @@ A row output is given with output values:
     done:  Signifies when row of matrix multiplication is done for batch timing
 
 --------------------
-**internal_rot_four.sv:**
+**internal_rot_two.sv:**
 --------------------
 
 This module handles the inner rotation of matrix multiplication with B matrix values
@@ -237,7 +233,7 @@ The inputs for this module are as follows:
 
 This module implements an IEEE 754 floating point addition of two values
 
-It's entirely combinational with registers just to store the output
+It's entirely combinational only using registers to store the output
 
 This module ignores almost every special scenario such as NaN and infinity with the only exception being 0. TAKE CAUTION USING THIS MODULE AS IT IS NOT A COMPLETE FLOATING POINT ACCUMULATOR BECAUSE IT IGNORES THESE SPECIAL VALUES. It also doesn't handle overflow because it doesn't handle infinity or NaN.
 
