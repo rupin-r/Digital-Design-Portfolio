@@ -1,6 +1,6 @@
-# College Projects
+# Digital Design Porfolio
 
-A compilation of college projects I have worked on individually or as part of a team and am allowed to release without the possibility of academic disintegrity at University at Buffalo or Worcester Polytechnic Institute.
+A compilation of projects I have worked on individually or as part of a team and am allowed to release without the possibility of academic disintegrity at University at Buffalo or Worcester Polytechnic Institute.
 
 ## Project Descriptions
 
